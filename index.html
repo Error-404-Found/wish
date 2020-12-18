@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="title" content="">
+<meta name="description" content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021" >
+<meta name="keywords" content="some, content, added" >
+<title>change meta content</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $( document ).ready(function(){
+        $('.content').keyup(function(){
+            $('meta[name=title]').attr('content', 'Hey there, ' + $(this).val() + ' has sent you gifts this Festive Season!'); 
+        });
+    });
+
+    function createFaction() {
+            var name = document.getElementById('content'),
+            factionName = name.value;
+
+            document.getElementById('name').innerHTML = factionName;
+        }
+
+</script>
+</head>
+
+<body>
+    <p id="name"></p>
+    <input type="text" name="content" id="content" class="content" />
+    <button type="submit" onclick="createFaction();">Go</button>
+    <a class="btn whatsapp-btn" href="https://openit.site/in/f-chn?f=Djsbdkejsb">
+        <div class="whatsapp-share-text"><b> 👈 Share</b></div>
+        <img class="whatsapp-icon" src="./f-chn_files/whatsapp_icon.svg">
+    </a>
+</body>
+</html>
