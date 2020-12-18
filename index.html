@@ -17,23 +17,20 @@
 <script type="text/javascript">
 window.onload = (event) => {
   var senderName = window.location.search;
-    document.getElementById("name").innerText = senderName + "Wishes you a Merry Christmas and a Happy New year 2021!";
-};
-
-    function createFaction() {
-        var name = document.getElementById('content');
-        factionName = name.value;
-
-        document.getElementById('name').innerHTML = factionName;
-    }
+    senderName = senderName.slice(0,2);
+    document.getElementById("name").innerText = senderName + " Wishes you a Merry Christmas and a Happy New year 2021!";
+    
     function addname(){
         var name = document.getElementById('content');
         factionName = name.value;
-        console.log(factionName);
         var message =" Hey there," + factionName + " has sent you gifts this Festive Season!";
         var whatsapp = "whatsapp://send?text=https://elated-khorana-f616b5.netlify.app/?q=" + factionName + message;
-        $('.whatsapp-btn').attr("href", whatsapp);
+        
+        window.open(whatsapp);
+//         $('.whatsapp-btn').attr("href", whatsapp);
     }
+};
+    
 </script>
 </body>
 </html>
