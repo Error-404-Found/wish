@@ -4,7 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="title" content="">
 <meta name="description" content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021" >
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p id="name"></p>
+    <input type="text" name="content" id="content" class="content" />
+    <button type="submit" onclick="createFaction();">Go</button>
+    <a class="btn whatsapp-btn" href="#" onclick="addname();">
+        <div class="whatsapp-share-text"><b> 👈 Share</b></div>
+        <img class="whatsapp-icon" src="https://elated-khorana-f616b5.netlify.app/images/whatsapp_icon.svg">
+    </a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
     $( document ).ready(function(){
         $('.content').keyup(function(){
@@ -13,22 +23,17 @@
     });
 
     function createFaction() {
-            var name = document.getElementById('content'),
-            factionName = name.value;
+        var name = document.getElementById('content'),
+        factionName = name.value;
 
-            document.getElementById('name').innerHTML = factionName;
-        }
-
+        document.getElementById('name').innerHTML = factionName;
+    }
+    function addname(){
+        var name = document.getElementById('content');
+        var message ="Hey there," + name + " has sent you gifts this Festive Season!";
+        var whatsapp = "whatsapp://send?text=" + message;
+        $('.whatsapp-btn').attr("href", whatsapp);
+    }
 </script>
-</head>
-
-<body>
-    <p id="name"></p>
-    <input type="text" name="content" id="content" class="content" />
-    <button type="submit" onclick="createFaction();">Go</button>
-    <a class="btn whatsapp-btn" href="https://elated-khorana-f616b5.netlify.app?f=" + name +>
-        <div class="whatsapp-share-text"><b> 👈 Share</b></div>
-        <img class="whatsapp-icon" src="https://elated-khorana-f616b5.netlify.app/images/whatsapp_icon.svg">
-    </a>
 </body>
 </html>
