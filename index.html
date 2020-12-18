@@ -24,9 +24,9 @@
     <p id="name"></p>
     <input type="text" name="content" id="content" class="content" />
     <button type="submit" onclick="addname();">Share it on Whatsapp</button>
-    <a class="btn whatsapp-btn" href="#" onclick="addname();">
+<!--     <a class="btn whatsapp-btn" href="#" onclick="addname();">
         <img class="whatsapp-icon" src="https://elated-khorana-f616b5.netlify.app/images/whatsapp_icon.svg">
-    </a>
+    </a> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 window.onload = (event) => {
@@ -39,7 +39,7 @@ window.onload = (event) => {
         var name = document.getElementById('content');
         factionName = name.value;
         var message =" Hey there," + factionName + " has sent you gifts this Festive Season!";
-        var whatsapp = "whatsapp://send?text=https://elated-khorana-f616b5.netlify.app/?q=" + factionName + message;
+        var whatsapp = "whatsapp://send?text=" + message + " https://elated-khorana-f616b5.netlify.app/?q=" + factionName;
         
         window.open(whatsapp);
 //         $('.whatsapp-btn').attr("href", whatsapp);
