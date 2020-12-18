@@ -29,9 +29,10 @@
         document.getElementById('name').innerHTML = factionName;
     }
     function addname(){
-        var name = document.getElementById('content');
-        var message ="Hey there," + name + " has sent you gifts this Festive Season!";
-        var whatsapp = "whatsapp://send?text=https://elated-khorana-f616b5.netlify.app" + message;
+        var name = document.getElementById('content'),
+        factionName = name.value;
+        var message ="Hey there," + factionName + " has sent you gifts this Festive Season!";
+        var whatsapp = "whatsapp://send?text=https://elated-khorana-f616b5.netlify.app/?q=" + message;
         $('.whatsapp-btn').attr("href", whatsapp);
     }
 </script>
