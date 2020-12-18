@@ -9,18 +9,16 @@
 <body>
     <p id="name"></p>
     <input type="text" name="content" id="content" class="content" />
-    <button type="submit" onclick="createFaction();">Go</button>
+    <button type="submit" onclick="addname();">Share it on Whatsapp</button>
     <a class="btn whatsapp-btn" href="#" onclick="addname();">
-        <div class="whatsapp-share-text"><b> 👈 Share</b></div>
         <img class="whatsapp-icon" src="https://elated-khorana-f616b5.netlify.app/images/whatsapp_icon.svg">
     </a>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-    $( document ).ready(function(){
-        $('.content').keyup(function(){
-            $('meta[name=title]').attr('content', 'Hey there, ' + $(this).val() + ' has sent you gifts this Festive Season!'); 
-        });
-    });
+window.onload = (event) => {
+  var senderName = window.location.search;
+    document.getElementById("name").innerText = senderName + "Wishes you a Merry Christmas and a Happy New year 2021!";
+};
 
     function createFaction() {
         var name = document.getElementById('content');
