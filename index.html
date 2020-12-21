@@ -94,8 +94,12 @@
                 console.log("clicked");
                 y.setAttribute('src', "videos/GIF2.mp4");
                 x.load();
+                
+                setTimeout(function(){
+                    fade(x);
+                }, 4500);
             });
-            fade(x);
+            
         }
         function fade(element) {
             var op = 1;  // initial opacity
