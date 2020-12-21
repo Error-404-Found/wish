@@ -5,11 +5,15 @@
 #name {
   color: white;
 }
-body{
-  max-width: 600px;
+body {
+  /* max-width: 600px; */
+  text-align: center;
 }
-.bg-body{
-  background-image: url('/images/New.png');
+img.bg{
+  height: 100vh;
+}
+.bg-body {
+  background-image: url("/images/New.png");
   background-size: auto;
   height: 100vh;
   background-repeat: no-repeat;
@@ -17,13 +21,16 @@ body{
 @import url(https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700);
 
 .wishing {
-  background: #000854;
+  /* background: #000854; */
   background-size: auto;
-  height: 100vh;
+  /* max-width: 460px; */
+  /* height: 100vh; */
   background-repeat: no-repeat;
   overflow: hidden;
-  margin: auto;
+  margin: 0;
   width: 100%;
+  position: absolute;
+  top: 50%;
 }
 .christmas-blue {
   color: #035ee2;
@@ -379,7 +386,7 @@ Snow.
 }
 #snow {
   background: none;
-  z-index: -1;
+  z-index: 0;
   background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png"),
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png"),
     url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png");
