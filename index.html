@@ -249,7 +249,7 @@
             var giftbags = document.getElementsByClassName("giftbag");
             
             for(var i=0; i<giftbags.length; i++){
-                giftbags[i].firstChild.src = giftbags[i].firstChild.dataset.close;
+                giftbags[i].firstElementChild.src = giftbags[i].firstElementChild.dataset.close;
                 giftbags[i].querySelector(".wishCard").classList.remove("show"+i);
             }
             el.src = el.dataset.open;
