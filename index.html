@@ -63,6 +63,7 @@
         };
         var x = document.getElementById("myVideo"); 
         function playVid() { 
+            x.prop('muted', true);
             x.play(); 
         }
         x.addEventListener('ended',myHandler,false);
