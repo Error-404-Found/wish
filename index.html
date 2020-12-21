@@ -34,9 +34,10 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
+    <audio src="audio/audio.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
     <div id="snow"></div>
-    <video id="myVideo">
-        <source id="mp4_src" src="images/intro.mp4" type="video/mp4" autoplay="true" muted="muted">
+    <video id="myVideo" muted autoplay>
+        <source id="mp4_src" src="videos/intro.mp4" type="video/mp4">
     </video>
     <img src="images/New.png" alt="Background" class="bg" style="display:none">
     <section class="wishing" style="display:none">
@@ -61,16 +62,20 @@
             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
             playVid();
         };
-        var x = document.getElementById("myVideo"); 
-        function playVid() {
+        var x = document.getElementById("myVideo");
+        var y = document.getElementById('mp4_src');
+        function playVid() { 
             x.play(); 
         }
         x.addEventListener('ended',myHandler,false);
         function myHandler(e) {
             x.addEventListener("click", function(){
+                document.getElementById("my_audio").play();
                 console.log("clicked");
+                y.setAttribute('src', "videos/GIF2.mp4");
+                x.load();
             });
-        } 
+        }
 
         function addname() {
             var name = document.getElementById('content');
