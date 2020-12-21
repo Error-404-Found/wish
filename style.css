@@ -5,15 +5,19 @@
 #name {
   color: white;
 }
-/* .wishing {
-  background-color: aqua;
-  padding: 5% 0;
-} */
+body{
+  max-width: 600px;
+}
+.bg-body{
+  background-image: url('/images/New.png');
+  background-size: auto;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
 @import url(https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700);
 
 .wishing {
-  /* background: #000854; */
-  background-image: url('/images/New.png');
+  background: #000854;
   background-size: auto;
   height: 100vh;
   background-repeat: no-repeat;
