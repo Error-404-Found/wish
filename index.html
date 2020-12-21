@@ -249,7 +249,8 @@
             window.open(whatsapp);
         }
         
-        function openGift(el,id) {
+        function openGift(el) {
+            console.log(el);
             var giftbags = document.getElementsByClassName("giftbag");
             var gb,gcard;
             for(var i=0; i<giftbags.length; i++){
