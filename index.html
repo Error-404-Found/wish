@@ -159,10 +159,10 @@
                 document.getElementById("my_audio").play();
                 y.setAttribute('src', "videos/GIF2.mp4");
                 x.load();
+                fade(document.getElementById("senderBox"));
                 setTimeout(function(){
                     fade(x);
                     unfade(document.getElementById("wishScreen"));
-                    unfade(document.getElementById("senderBox"));
                 }, 4000);
             });
             
