@@ -110,16 +110,16 @@
         <section id="wishScreen" class="wishing" style="display:none">
         <div id="gifts">
                 <div class="giftbag" >
-                    <img src="videos/GIF-3.gif" alt="">
+                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
                 <div class="giftbag" >
-                    <img src="videos/GIF-3.gif" alt="">
+                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
                 <div class="giftbag" >
-                    <img src="videos/GIF-3.gif" alt="">
+                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
                 <div class="giftbag" >
-                    <img src="videos/GIF-3.gif" alt="">
+                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
         </div>
         <div id="share2WaBtn" class="container-fluid">
@@ -198,6 +198,10 @@
             var whatsapp = "whatsapp://send?text=" + message + " https://dhanigreetings.netlify.app/?q=" + factionName;
 
             window.open(whatsapp);
+        }
+        
+        function openGift() {
+            console.log(this);
         }
 
 
