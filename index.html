@@ -110,16 +110,16 @@
         <section id="wishScreen" class="wishing" style="display:none">
         <div id="gifts">
                 <div class="giftbag" >
-                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img onclick="openGift(this);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
                 <div class="giftbag" >
-                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img onclick="openGift(this);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
                 <div class="giftbag" >
-                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img onclick="openGift(this);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
                 <div class="giftbag" >
-                    <img onclick="openGift();" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img onclick="openGift(this);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                 </div>
         </div>
         <div id="share2WaBtn" class="container-fluid">
@@ -200,8 +200,8 @@
             window.open(whatsapp);
         }
         
-        function openGift() {
-            console.log(this);
+        function openGift(el) {
+            console.log(el);
         }
 
 
