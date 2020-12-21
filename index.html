@@ -97,7 +97,7 @@
         <video id="myVideo" muted autoplay>
             <source id="mp4_src" src="videos/intro.mp4" type="video/mp4">
         </video>
-            <div id="senderBox">
+            <div id="senderBox" style="display:none;">
                 <div style="position:relative">
                 <img src="images/name_bg_03.png" style="width: 350px;">
                 <span id="senderName">Dummy Text</span>
@@ -149,9 +149,9 @@
             x.play();
             
             setTimeout(function(){
-                    myHandler();
-                }, 6000);
-            myHandler();
+                myHandler();
+                fade(document.getElementById("senderBox"));
+                }, 5000);
         }
 //         x.addEventListener('ended', myHandler, false);
         function myHandler() {
@@ -162,6 +162,7 @@
                 setTimeout(function(){
                     fade(x);
                     unfade(document.getElementById("wishScreen"));
+                    unfade(document.getElementById("senderBox"));
                 }, 4000);
             });
             
