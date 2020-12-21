@@ -1,50 +1,64 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<!-- Primary Meta Tags -->
-<title>Hey there, I have sent you gifts this Festive Season!</title>
-<meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
-<meta name="description" content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
+    <!-- Primary Meta Tags -->
+    <title>Hey there, I have sent you gifts this Festive Season!</title>
+    <meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
+    <meta name="description"
+        content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
 
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://elated-khorana-f616b5.netlify.app/">
-<meta property="og:title" content="Hey there, I have sent you gifts this Festive Season!">
-<meta property="og:description" content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
-<meta property="og:image" content="">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elated-khorana-f616b5.netlify.app/">
+    <meta property="og:title" content="Hey there, I have sent you gifts this Festive Season!">
+    <meta property="og:description"
+        content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
+    <meta property="og:image" content="">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://elated-khorana-f616b5.netlify.app/">
-<meta property="twitter:title" content="Hey there, I have sent you gifts this Festive Season!">
-<meta property="twitter:description" content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
-<meta property="twitter:image" content=""></head>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elated-khorana-f616b5.netlify.app/">
+    <meta property="twitter:title" content="Hey there, I have sent you gifts this Festive Season!">
+    <meta property="twitter:description"
+        content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
+    <meta property="twitter:image" content="">
+</head>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 
 <body>
-    <p id="name"></p>
-    <input type="text" name="content" id="content" class="content" />
-    <button type="submit" onclick="addname();">Share it on Whatsapp</button>
-<!--     <a class="btn whatsapp-btn" href="#" onclick="addname();">
-        <img class="whatsapp-icon" src="https://elated-khorana-f616b5.netlify.app/images/whatsapp_icon.svg">
-    </a> -->
+    <section class="wishing">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p id="name"></p>
+                    <input type="text" name="content" id="content" class="content" />
+                    <button type="submit" onclick="addname();">Share it on Whatsapp</button>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-window.onload = (event) => {
-  var senderName = window.location.search;
-    senderName = senderName.slice(3,senderName.length);
-    document.getElementById("name").innerText = senderName + " Wishes you a Merry Christmas and a Happy New year 2021!";
-};
-    
-    function addname(){
-        var name = document.getElementById('content');
-        factionName = name.value;
-        var message =" Hey there," + factionName + " has sent you gifts this Festive Season!";
-        var whatsapp = "whatsapp://send?text=" + message + " https://elated-khorana-f616b5.netlify.app/?q=" + factionName;
-        
-        window.open(whatsapp);
-//         $('.whatsapp-btn').attr("href", whatsapp);
-    }
-    
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript">
+        window.onload = (event) => {
+            var senderName = window.location.search;
+            senderName = senderName.slice(3, senderName.length);
+            document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
+        };
+
+        function addname() {
+            var name = document.getElementById('content');
+            factionName = name.value;
+            var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
+            var whatsapp = "whatsapp://send?text=" + message + " https://elated-khorana-f616b5.netlify.app/?q=" + factionName;
+
+            window.open(whatsapp);
+        }
+    </script>
 </body>
+
 </html>
