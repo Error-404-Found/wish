@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
-    <title>Hey there, I have sent you gifts this Festive Season!</title>
+    <title>Dhani</title>
+    <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-32x32.png" sizes="32x32"/>
+    <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-192x192.png" sizes="192x192"/>
+    <link rel="apple-touch-icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-180x180.png"/>
     <meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta name="description"
         content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
@@ -32,8 +35,11 @@
 
 <body>
     <div id="snow"></div>
-    <img src="images/New.png" alt="Background" class="bg">
-    <section class="wishing">
+    <video id="myVideo">
+        <source id="mp4_src" src="images/intro.mp4" type="video/mp4">
+    </video>
+    <img src="images/New.png" alt="Background" class="bg" style="display:none">
+    <section class="wishing" style="display:none">
         <div class="container-fluid">
             <div id="snow"></div>
             <div class="row">
@@ -53,8 +59,12 @@
             senderName = senderName.slice(3, senderName.length);
             // document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
+            playVid();
         };
-
+        var x = document.getElementById("myVideo"); 
+        function playVid() { 
+            x.play(); 
+        } 
         function addname() {
             var name = document.getElementById('content');
             factionName = name.value;
