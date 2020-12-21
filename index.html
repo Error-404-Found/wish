@@ -30,18 +30,13 @@
 <link rel="stylesheet" href="style.css">
 
 <body class="wishing">
-    <section>
-        <div class="container-fluid">
-            <div id="snow"></div>
-            <div class="row">
-                <div class="col-sm-12 text-center">
-                    <p id="name" class="christmas"></p>
-                    <input type="text" name="content" id="content" class="content" />
-                    <button type="submit" onclick="addname();">Share it on Whatsapp</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="snow"></div>
+    <div class="col-sm-12 text-center">
+        <p id="name" class="christmas"></p>
+        <input type="text" name="content" id="content" class="content" />
+        <button type="submit" onclick="addname();">Share it on Whatsapp</button>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript">
@@ -59,16 +54,16 @@
 
             window.open(whatsapp);
         }
-        $.fn.christmas = function() {
-            $(this).each(function() {
-                $(this).html($(this).text().split("").map(function(v, i) {
-                return '<span class="christmas-' + (i % 2 == 0 ? 'gold' : 'blue') + '">' + v + '</span>';
+        $.fn.christmas = function () {
+            $(this).each(function () {
+                $(this).html($(this).text().split("").map(function (v, i) {
+                    return '<span class="christmas-' + (i % 2 == 0 ? 'gold' : 'blue') + '">' + v + '</span>';
                 }).join(""));
             });
         };
 
-        $(function() { 
-            $('h1.christmas').christmas();
+        $(function () {
+            $('p.christmas').christmas();
         });
     </script>
 </body>
