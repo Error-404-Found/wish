@@ -88,11 +88,11 @@
         <div id="bg">
         <video id="myVideo" muted autoplay>
             <source id="mp4_src" src="videos/intro.mp4" type="video/mp4">
-             <div id="senderBox">
+        </video>
+            <div id="senderBox">
                 <img>
                 <span id="senderName">Dummy Text</span>
             </div>
-        </video>
 
         <img src="images/New.png" alt="Background" class="bg">
         </div>
@@ -130,6 +130,7 @@
             senderName = senderName.slice(3, senderName.length);
             // document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
+            document.getElementById("senderName").innerText = senderName;
             playVid();
         };
         var x = document.getElementById("myVideo");
