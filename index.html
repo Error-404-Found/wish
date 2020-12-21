@@ -172,15 +172,13 @@
                 gb = giftbags[i].firstElementChild;
                 gcard = giftbags[i].querySelector(".wishCard")
                 
-                gb.src = gb.dataset.close;
-//                 gcard.classList.remove("show"+(i+1));
+//                 gb.src = gb.dataset.close;
+                gcard.classList.remove("show"+(i+1));
                 
                 if(giftbags[i] == el) {
                     gb.src = gb.dataset.open;
-                    if(!(gcard.classList.contains("show"+(i+1)))) {
                     gcard.classList.add("show"+(i+1));
-                    }
-                                    }
+                }
             }
 //             el.src = el.dataset.open;
 //             document.getElementById("wishCard"+id).classList.add("show"+id);
