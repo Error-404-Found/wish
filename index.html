@@ -124,15 +124,14 @@
         var y = document.getElementById('mp4_src');
         function playVid() {
             x.play();
+            myHandler();
         }
-        x.addEventListener('ended', myHandler, false);
-        function myHandler(e) {
+//         x.addEventListener('ended', myHandler, false);
+        function myHandler() {
             x.addEventListener("click", function () {
                 document.getElementById("my_audio").play();
-                console.log("clicked");
                 y.setAttribute('src', "videos/GIF2.mp4");
                 x.load();
-                
                 setTimeout(function(){
                     fade(x);
                     unfade(document.getElementById("wishScreen"));
