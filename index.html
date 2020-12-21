@@ -245,7 +245,13 @@
             window.open(whatsapp);
         }
         
-        function openGift(el,id) {  
+        function openGift(el,id) {
+            var giftbags = document.getElementsByClassName("giftbag");
+            
+            for(var i=0; i<giftbags.length; i++){
+                giftbags[i].firstChild.src = giftbags[i].firstChild.dataset.close;
+                giftbags[i].querySelector(".wishCard").classList.remove("show"+i);
+            }
             el.src = el.dataset.open;
             document.getElementById("wishCard"+id).classList.toggle("show"+id);
         }
