@@ -1,14 +1,18 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
     <title>Dhani</title>
-    <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-32x32.png" sizes="32x32"/>
-    <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-192x192.png" sizes="192x192"/>
-    <link rel="apple-touch-icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-180x180.png"/>
+    <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-32x32.png"
+        sizes="32x32" />
+    <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-192x192.png"
+        sizes="192x192" />
+    <link rel="apple-touch-icon"
+        href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-180x180.png" />
     <meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta name="description"
         content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
@@ -42,6 +46,22 @@
     <img src="images/New.png" alt="Background" class="bg" style="display:none">
     <section class="wishing" style="display:none">
         <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="videos/GIF-3.gif" alt="">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="videos/GIF-3.gif" alt="">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="videos/GIF-3.gif" alt="">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="videos/GIF-3.gif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
             <div id="snow"></div>
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -64,19 +84,43 @@
         };
         var x = document.getElementById("myVideo");
         var y = document.getElementById('mp4_src');
-        function playVid() { 
-            x.play(); 
+        function playVid() {
+            x.play();
         }
-        x.addEventListener('ended',myHandler,false);
+        x.addEventListener('ended', myHandler, false);
         function myHandler(e) {
-            x.addEventListener("click", function(){
+            x.addEventListener("click", function () {
                 document.getElementById("my_audio").play();
                 console.log("clicked");
                 y.setAttribute('src', "videos/GIF2.mp4");
                 x.load();
             });
+            fade(x);
         }
-
+        function fade(element) {
+            var op = 1;  // initial opacity
+            var timer = setInterval(function () {
+                if (op <= 0.1) {
+                    clearInterval(timer);
+                    element.style.display = 'none';
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op -= op * 0.1;
+            }, 50);
+        }
+        function unfade(element) {
+            var op = 0.1;  // initial opacity
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+                if (op >= 1) {
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.1;
+            }, 10);
+        }
         function addname() {
             var name = document.getElementById('content');
             factionName = name.value;
@@ -85,7 +129,7 @@
 
             window.open(whatsapp);
         }
-        
+
 
         // $.fn.christmas = function() {
         //     $(this).each(function() {
