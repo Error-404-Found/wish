@@ -250,7 +250,7 @@
             
             for(var i=0; i<giftbags.length; i++){
                 giftbags[i].firstElementChild.src = giftbags[i].firstElementChild.dataset.close;
-                giftbags[i].querySelector(".wishCard").classList.remove("show"+i+1);
+                giftbags[i].querySelector(".wishCard").classList.remove("show"+(i+1));
             }
             el.src = el.dataset.open;
             document.getElementById("wishCard"+id).classList.add("show"+id);
