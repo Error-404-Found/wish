@@ -150,20 +150,20 @@
     </div>
         <section id="wishScreen" class="wishing" style="display:none">
         <div id="gifts">
-                <div class="giftbag" >
-                    <img onclick="openGift(this,1);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                     <img id="wishCard1" class="wishCard" src="images/1.png">
                 </div>
-                <div class="giftbag" >
-                    <img onclick="openGift(this,2);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                     <img id="wishCard2" class="wishCard" src="images/2.png">
                 </div>
-                <div class="giftbag" >
-                    <img onclick="openGift(this,3);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                     <img id="wishCard3" class="wishCard" src="images/3.png">
                 </div>
-                <div class="giftbag" >
-                    <img onclick="openGift(this,4);" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
                     <img id="wishCard4" class="wishCard" src="images/4.png">
                 </div>
         </div>
@@ -247,13 +247,21 @@
         
         function openGift(el,id) {
             var giftbags = document.getElementsByClassName("giftbag");
-            
+            var gb,gcard;
             for(var i=0; i<giftbags.length; i++){
-                giftbags[i].firstElementChild.src = giftbags[i].firstElementChild.dataset.close;
-                giftbags[i].querySelector(".wishCard").classList.remove("show"+(i+1));
+                gb = giftbags[i].firstElementChild;
+                gcard = giftbags[i].querySelector(".wishCard")
+                
+                gb.src = gb.dataset.close;
+                gcard.classList.remove("show"+(i+1));
+                
+                if(gb == el) {
+                    gb.src = gb.dataset.open;
+                    gcard.classList.add("show"+(i+1));
+                }
             }
-            el.src = el.dataset.open;
-            document.getElementById("wishCard"+id).classList.add("show"+id);
+//             el.src = el.dataset.open;
+//             document.getElementById("wishCard"+id).classList.add("show"+id);
         }
 
 
