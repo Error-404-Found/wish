@@ -9,6 +9,9 @@ body {
   /* max-width: 600px; */
   text-align: center;
 }
+input, button{
+  position: relative;
+}
 img.bg{
   height: 100vh;
 }

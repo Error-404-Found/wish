@@ -1,8 +1,9 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Primary Meta Tags -->
     <title>Hey there, I have sent you gifts this Festive Season!</title>
     <meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
@@ -62,17 +63,17 @@
 
             window.open(whatsapp);
         }
-        $.fn.christmas = function() {
-            $(this).each(function() {
-                $(this).html($(this).text().split("").map(function(v, i) {
-                return '<span class="christmas-' + (i % 2 == 0 ? 'gold' : 'blue') + '">' + v + '</span>';
-                }).join(""));
-            });
-        };
+        // $.fn.christmas = function() {
+        //     $(this).each(function() {
+        //         $(this).html($(this).text().split("").map(function(v, i) {
+        //         return '<span class="christmas-' + (i % 2 == 0 ? 'gold' : 'blue') + '">' + v + '</span>';
+        //         }).join(""));
+        //     });
+        // };
 
-        $(function() { 
-            $('p.christmas').christmas();
-        });
+        // $(function() { 
+        //     $('p.christmas').christmas();
+        // });
     </script>
 </body>
 
