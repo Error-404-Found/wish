@@ -117,7 +117,7 @@
             });
             
         }
-        function fade(element) {
+        function fade(element, time=50) {
             var op = 1;  // initial opacity
             var timer = setInterval(function () {
                 if (op <= 0.1) {
@@ -127,9 +127,9 @@
                 element.style.opacity = op;
                 element.style.filter = 'alpha(opacity=' + op * 100 + ")";
                 op -= op * 0.1;
-            }, 50);
+            }, time);
         }
-        function unfade(element) {
+        function unfade(element, time=50) {
             var op = 0.1;  // initial opacity
             element.style.display = 'block';
             var timer = setInterval(function () {
@@ -139,7 +139,7 @@
                 element.style.opacity = op;
                 element.style.filter = 'alpha(opacity=' + op * 100 + ")";
                 op += op * 0.1;
-            }, 10);
+            }, time);
         }
         function addname() {
             var name = document.getElementById('content');
