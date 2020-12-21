@@ -11,7 +11,7 @@
 } */
 @import url(https://fonts.googleapis.com/css?family=Mountains+of+Christmas:700);
 
-section.wishing {
+.wishing {
   /* background: #000854; */
   background-image: url('/images/New.png');
   background-size: auto;
