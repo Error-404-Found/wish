@@ -78,7 +78,7 @@ div#share2WaBtn {
   top: 50%;
 }
 
-div#senderBox {
+div#senderBox, div#senderBox2 {
   position: absolute;
   top: 62%;
   left: 50%;
