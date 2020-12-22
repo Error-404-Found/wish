@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Primary Meta Tags -->
     <title>Dhani</title>
     <link rel="icon" href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-32x32.png"
@@ -19,7 +19,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://elated-khorana-f616b5.netlify.app/">
+    <meta property="og:url" content="https://dhanigreetings.com/NYE2021/">
     <meta property="og:title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta property="og:description"
         content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
@@ -27,65 +27,13 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://elated-khorana-f616b5.netlify.app/">
+    <meta property="twitter:url" content="https://dhanigreetings.com/NYE2021/">
     <meta property="twitter:title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta property="twitter:description"
         content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
     <meta property="twitter:image" content="">
 </head>
 <!-- CSS only -->
-    <style>
-        #bg {
-            position: relative;
-            display: inline-block;
-        }
-        
-        #bg>video {
-            width: auto;
-            position: absolute;
-            height: 100%;
-        }
-        
-        #main {
-            display: inline-block;
-            position:relative;
-        }
-        
-        .giftbag, .cardpop {
-            float: left;
-            width: 25%;
-        }
-        .cardpop img {
-            max-width: 100%;
-        }
-        #gifts, #cards {
-            display: inline-block;
-            width: 100%;
-        }
-        
-        .wishing {
-            width: 100%;
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            top: 10%;
-        }
-        
-        div#senderBox {
-            position: absolute;
-            top: 62%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        #senderName {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -60%);
-                font-size: 23px;
-        }
-    </style>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
@@ -99,7 +47,7 @@
         <video id="myVideo" muted autoplay>
             <source id="mp4_src" src="videos/intro.mp4" type="video/mp4">
         </video>
-            <div id="senderBox">
+            <div id="senderBox" style="display:none;">
                 <div style="position:relative">
                 <img src="images/name_bg_03.png" style="width: 350px;">
                 <span id="senderName">Dummy Text</span>
@@ -110,46 +58,43 @@
         </div>
     </div>
         <section id="wishScreen" class="wishing" style="display:none">
-        <div id="cards">
-            <div class="cardpop">
-                <img src="images/1.png" alt="" style="display: none;">
-            </div>
-            <div class="cardpop">
-                <img src="images/2.png" alt="" style="display: none;">
-            </div>
-            <div class="cardpop">
-                <img src="images/3.png" alt="" style="display: none;">
-            </div>
-            <div class="cardpop">
-                <img src="images/4.png" alt="" style="display: none;">
-            </div>
-        </div>
         <div id="gifts">
-                <div class="giftbag" >
-                    <img src="images/potli.png" alt="" class="potli">
-                    <img src="videos/GIF-3.gif" alt="" style="display: none;">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img class="gb" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img id="wishCard1" class="wishCard" src="images/1.png">
                 </div>
-                <div class="giftbag" >
-                    <img src="images/potli.png" alt="" class="potli">
-                    <img src="videos/GIF-3.gif" alt="" style="display: none;">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img class="gb" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img id="wishCard2" class="wishCard" src="images/2.png">
                 </div>
-                <div class="giftbag" >
-                    <img src="images/potli.png" alt="" class="potli">
-                    <img src="videos/GIF-3.gif" alt="" style="display: none;">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img class="gb" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img id="wishCard3" class="wishCard" src="images/3.png">
                 </div>
-                <div class="giftbag" >
-                    <img src="images/potli.png" alt=""class="potli">
-                    <img src="videos/GIF-3.gif" alt="" style="display: none;">
+                <div onclick="openGift(this)" class="giftbag" >
+                    <img class="gb" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
+                    <img id="wishCard4" class="wishCard" src="images/4.png">
                 </div>
         </div>
-    </section>
-    <section>
-        <div id="share2WaBtn" class="container-fluid">
+        <!-- <div id="share2WaBtn" class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p id="name" class="christmas"></p>
                     <input type="text" name="content" id="content" class="content" />
                     <button type="submit" onclick="addname();">Share it on Whatsapp</button>
+                </div>
+            </div>
+        </div> -->
+    </section>
+    <div class="santabase">
+        <img src="images/Santabase.png" alt="">
+    </div>
+    <section class="whatsappshare">
+        <div id="share2WaBtn" class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p id="name" class="christmas" style="display: none;"></p>
+                    <div class="whatsapp"><label>Share with your loved ones</label>&nbsp;<input type="text" name="content" id="content" class="content" /><button type="submit" onclick="addname();">Share <img src="images/whatsapp_icon.svg" width="30%"></button></div>                    
                 </div>
             </div>
         </div>
@@ -171,9 +116,9 @@
             x.play();
             
             setTimeout(function(){
-                    myHandler();
-                }, 6000);
-            myHandler();
+                myHandler();
+                unfade(document.getElementById("senderBox"));
+                }, 2750);
         }
 //         x.addEventListener('ended', myHandler, false);
         function myHandler() {
@@ -181,6 +126,7 @@
                 document.getElementById("my_audio").play();
                 y.setAttribute('src', "videos/GIF2.mp4");
                 x.load();
+                fade(document.getElementById("senderBox"));
                 setTimeout(function(){
                     fade(x);
                     unfade(document.getElementById("wishScreen"));
@@ -216,13 +162,32 @@
             var name = document.getElementById('content');
             factionName = name.value;
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
-            var whatsapp = "whatsapp://send?text=" + message + " https://dhanigreetings.netlify.app/?q=" + factionName;
+            var whatsapp = "whatsapp://send?text=" + message + " https://dhanigreetings.com/NYE2021/?q=" + factionName;
 
             window.open(whatsapp);
         }
-        function poltiAnimation(poltinumber){
-            document.getElementsByClassName("potli").nextSibling.style.display = "block";
+        
+        function openGift(el) {
+            console.log(el);
+            var giftbags = document.getElementsByClassName("giftbag");
+            var gb,gcard;
+            for(var i=0; i<giftbags.length; i++){
+                gb = giftbags[i].firstElementChild;
+                gcard = giftbags[i].querySelector(".wishCard")
+                
+                gb.src = gb.dataset.close;
+                gcard.classList.remove("show"+(i+1));
+                
+                if(giftbags[i] == el) {
+                    gb.src = gb.dataset.open;
+                    gcard.classList.add("show"+(i+1));
+                }
+            }
+//             el.src = el.dataset.open;
+//             document.getElementById("wishCard"+id).classList.add("show"+id);
         }
+
+
         // $.fn.christmas = function() {
         //     $(this).each(function() {
         //         $(this).html($(this).text().split("").map(function(v, i) {
