@@ -163,7 +163,7 @@
         }
         
         function openGift(el) {
-            
+            var x
             document.getElementById("share2WaBtn").style.display = "block";
             var giftbags = document.getElementsByClassName("giftbag");
             var gb,gcard;
@@ -175,9 +175,18 @@
                 gcard.classList.remove("show"+(i+1));
                 
                 if(giftbags[i] == el) {
+                    if(el.classList.contains("opened")) x+=1;
+                    else el.classList.add("opened");
+                    
                     gb.src = gb.dataset.open;
                     gcard.classList.add("show"+(i+1));
                 }
+            }
+            
+            if(x==4) {
+                setTimeout(function(){
+                    fade(document.getElementById("wishScreen"));
+                }, 8000);
             }
         }
 
