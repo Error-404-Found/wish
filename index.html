@@ -121,14 +121,11 @@
             var senderName = decodeURIComponent(window.location.search);
             senderName = senderName.slice(3, senderName.length);
             senderName = senderName.replaceAll('-', ' ');
-            // document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
-//             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
             
             var sn = document.getElementsByClassName("senderNameAll");
             for(var s of sn) {
                 s.innerText = senderName;
             }
-//             document.getElementById("senderName").innerText = senderName;
             playVid();
         };
         var bagCount = 0;
@@ -140,7 +137,7 @@
             setTimeout(function(){
                 myHandler();
                 unfade(document.getElementById("senderBox"));
-                }, 2750);
+                }, 2000);
         }
 
         function myHandler() {
