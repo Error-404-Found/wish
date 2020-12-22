@@ -138,6 +138,7 @@
                     fade(x);
                     unfade(document.getElementById("wishScreen"));
                     unfade(document.getElementById("santaImg"));
+                    unfade(document.getElementById("share2WaBtn"));
                 }, 4000);
             });
             
@@ -178,7 +179,7 @@
         
         function openGift(el) {
             var oc = 0;
-            document.getElementById("share2WaBtn").style.display = "block";
+//             document.getElementById("share2WaBtn").style.display = "block";
             var giftbags = document.getElementsByClassName("giftbag");
             var gb,gcard;
             for(var i=0; i<giftbags.length; i++){
