@@ -186,7 +186,7 @@
                 gcard = giftbags[i].querySelector(".wishCard")
                 
 //                 gb.src = gb.dataset.close;
-                gcard.classList.remove("show"+(i+1));
+                gcard.classList.remove("show");
                 if(giftbags[i].classList.contains("opened")) {
                         oc = oc+1;
                     }
@@ -196,7 +196,7 @@
                     }
                     
                     gb.src = gb.dataset.open;
-                    gcard.classList.add("show"+(i+1));
+                    gcard.classList.add("show");
                 }
             }
             
