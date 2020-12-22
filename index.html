@@ -160,10 +160,16 @@
             factionName = name.value;
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
             var whatsapp = "whatsapp://send?text=" + message + " https://dhanigreetings.netlify.app/?q=" + factionName;
-
+            changeMeta(message);
             window.open(whatsapp);
         }
-        
+        function changeMeta(element){
+            var elm = document.createElement("meta");
+            elm.setAttribute("property", "og:title") 
+            elm.setAttribute("content", element);
+            // Append the element to the HEAD
+            document.getElementsByTagName("head")[0].appendChild(elm);
+        }
         function openGift(el) {
             console.log(el);
             var giftbags = document.getElementsByClassName("giftbag");
