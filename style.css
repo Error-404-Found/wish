@@ -593,7 +593,7 @@ Snow.
       height: 100%;
     }
     img.bg {
-      height: 100vh;
+      height: auto;
       max-width: 100%;
     }
     img.wishCard.show1 {
