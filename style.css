@@ -596,12 +596,12 @@ Snow.
       max-width: 100%;
     }
   
-      img.wishCard.show {
+    img.wishCard.show {
       opacity: 1;
       width: 230px;
       left: 50%;
       transform: translate(-50%, 10px);
-      top: -280px;
+      bottom: 0;
     }
     img#wishCard1 {
       left: 20%;
@@ -621,46 +621,52 @@ Snow.
     }
 }
 @media only screen and (max-width:375px){
-  img.wishCard.show1 {
-    opacity: 1;
-    width: 200px;
-    top: -240px;
-  }
-  img.wishCard.show2 {
-    opacity: 1;
-    width: 200px;
-    top: -240px;
-  }
-  img.wishCard.show3 {
-    opacity: 1;
-    width: 200px;
-    top: -240px;
-  }
-  img.wishCard.show4 {
-    opacity: 1;
-    width: 200px;
-    top: -240px;
-  }
+    img.wishCard.show {
+      opacity: 1;
+      width: 230px;
+      left: 50%;
+      transform: translate(-50%, 10px);
+      bottom: 0;
+    }
+    img#wishCard1 {
+      left: 20%;
+      bottom: 0;
+    }
+    img#wishCard2 {
+      left: 40%;
+      bottom: 0;
+    }
+    img#wishCard3 {
+      left: 60%;
+      bottom: 0;
+    }
+    img#wishCard4 {
+      left: 80%;
+      bottom: 0;
+    }
 }
 @media only screen and (max-width:320px){
-  img.wishCard.show1 {
-    opacity: 1;
-    width: 180px;
-    top: -220px;
-  }
-  img.wishCard.show2 {
-    opacity: 1;
-    width: 180px;
-    top: -220px;
-  }
-  img.wishCard.show3 {
-    opacity: 1;
-    width: 180px;
-    top: -220px;
-  }
-  img.wishCard.show4 {
-    opacity: 1;
-    width: 180px;
-    top: -220px;
-  }
+    img.wishCard.show {
+      opacity: 1;
+      width: 230px;
+      left: 50%;
+      transform: translate(-50%, 10px);
+      bottom: 0;
+    }
+    img#wishCard1 {
+      left: 20%;
+      bottom: 0;
+    }
+    img#wishCard2 {
+      left: 40%;
+      bottom: 0;
+    }
+    img#wishCard3 {
+      left: 60%;
+      bottom: 0;
+    }
+    img#wishCard4 {
+      left: 80%;
+      bottom: 0;
+    }
 }
