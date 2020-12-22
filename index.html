@@ -160,7 +160,7 @@
             factionName = name.value;
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
             var whatsapp = "whatsapp://send?text=" + message + " https://dhanigreetings.netlify.app/?q=" + factionName;
-            document.querySelector('meta[property="og:title"]').replaceWith('<meta property="og:title" content="New Title">');
+
             window.open(whatsapp);
         }
         
