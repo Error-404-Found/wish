@@ -119,6 +119,7 @@
         window.onload = (event) => {
             var senderName = decodeURIComponent(window.location.search);
             senderName = senderName.slice(3, senderName.length);
+            senderName = senderName.replaceAll('-', ' ');
             // document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
 //             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
             
@@ -184,7 +185,7 @@
         function addname() {
             var name = document.getElementById('content');
             factionName = name.value;
-            var url = window.location.origin + "?q=" + encodeURIComponent(factionName);
+            var url = window.location.origin + "?q=" + factionName.replaceAll(' ', '-');
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
             var whatsapp = "whatsapp://send?text=" + message + " " + url;
             console.log(url);
