@@ -634,3 +634,25 @@ Snow.
     top: -240px;
   }
 }
+@media only screen and (max-width:320px){
+  img.wishCard.show1 {
+    opacity: 1;
+    width: 180px;
+    top: -220px;
+  }
+  img.wishCard.show2 {
+    opacity: 1;
+    width: 180px;
+    top: -220px;
+  }
+  img.wishCard.show3 {
+    opacity: 1;
+    width: 180px;
+    top: -220px;
+  }
+  img.wishCard.show4 {
+    opacity: 1;
+    width: 180px;
+    top: -220px;
+  }
+}
