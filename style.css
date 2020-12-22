@@ -598,7 +598,7 @@ Snow.
   
     img.wishCard.show {
       opacity: 1;
-      width: 230px;
+      width: 50%;
       left: 50% !important;
       transform: translate(-50%, 10px);
       bottom: 0;
@@ -623,7 +623,7 @@ Snow.
 @media only screen and (max-width:375px){
     img.wishCard.show {
       opacity: 1;
-      width: 230px;
+      width: 50%;
       left: 50% !important;
       transform: translate(-50%, 10px);
       bottom: 0;
@@ -648,7 +648,7 @@ Snow.
 @media only screen and (max-width:320px){
     img.wishCard.show {
       opacity: 1;
-      width: 230px;
+      width: 50%;
       left: 50% !important;
       transform: translate(-50%, 10px);
       bottom: 0;
