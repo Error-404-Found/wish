@@ -54,7 +54,8 @@
                 </div>
             </div>
 
-        <img src="images/New.png" alt="Background" class="bg">
+        <img src="images/New.png" alt="Background" id="openbg" class="bg">
+        <img src="images/New.png" alt="Background" id="closingbg" class="bg">
         </div>
     </div>
         <section id="wishScreen" class="wishing" style="display:none">
@@ -189,6 +190,8 @@
             if(oc==3) {
                 setTimeout(function(){
                     fade(document.getElementById("wishScreen"));
+                    fade(document.getElementById("openbg"));
+                    unfade(document.getElementById("closingbg"));
                 }, 8000);
             }
         }
