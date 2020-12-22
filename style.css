@@ -1,56 +1,55 @@
-
-        @font-face {
-          font-family: 'Christmas Love';
-          src: url('fonts/ChristmasLove.eot');
-          src: url('fonts/ChristmasLove.eot?#iefix') format('embedded-opentype'),
-              url('fonts/ChristmasLove.woff2') format('woff2'),
-              url('fonts/ChristmasLove.woff') format('woff'),
-              url('fonts/ChristmasLove.ttf') format('truetype'),
-              url('fonts/ChristmasLove.svg#ChristmasLove') format('svg');
-          font-weight: normal;
-          font-style: normal;
-          font-display: swap;
-      }
-      .whatsapp {
-          background: #99161a;
-          border-radius: 10px;    
-          padding: 0 0 0 10px;
-      }
-      .whatsapp>label {
-          font-size: 15px;
-          color: white;
-          font-family: 'Christmas Love';
-      }
-      input#content {
-          font-size: 12px;
-          color: black;
-          border-radius: 5px;
-          width: 35%;
-      }
-      .whatsapp button {
-          width: 20%;
-          background: #004899;
-          color: white;
-          font-size: 15px;
-          border: 1px solid white;
-          border-radius: 8px;
-          font-family: 'Christmas Love';
-      }
-      section.whatsappshare {
-          max-width: 460px;
-      }
-      p#name {
-          margin: 0;
-      }
-      div#share2WaBtn {
-          padding: 0;
-      }
+@font-face {
+  font-family: "Christmas Love";
+  src: url("fonts/ChristmasLove.eot");
+  src: url("fonts/ChristmasLove.eot?#iefix") format("embedded-opentype"),
+    url("fonts/ChristmasLove.woff2") format("woff2"),
+    url("fonts/ChristmasLove.woff") format("woff"),
+    url("fonts/ChristmasLove.ttf") format("truetype"),
+    url("fonts/ChristmasLove.svg#ChristmasLove") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.whatsapp {
+  background: #99161a;
+  border-radius: 10px;
+  padding: 0 0 0 10px;
+}
+.whatsapp > label {
+  font-size: 15px;
+  color: white;
+  font-family: "Christmas Love";
+}
+input#content {
+  font-size: 12px;
+  color: black;
+  border-radius: 5px;
+  width: 35%;
+}
+.whatsapp button {
+  width: 20%;
+  background: #004899;
+  color: white;
+  font-size: 15px;
+  border: 1px solid white;
+  border-radius: 8px;
+  font-family: "Christmas Love";
+}
+section.whatsappshare {
+  max-width: 460px;
+}
+p#name {
+  margin: 0;
+}
+div#share2WaBtn {
+  padding: 0;
+}
 #bg {
   position: relative;
   display: inline-block;
 }
 
-#bg>video {
+#bg > video {
   width: auto;
   position: absolute;
   height: 100%;
@@ -58,7 +57,7 @@
 
 #main {
   display: inline-block;
-  position:relative;
+  position: relative;
 }
 
 .giftbag {
@@ -88,11 +87,11 @@ div#senderBox {
 }
 
 #senderName {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -60%);
-      font-size: 23px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 23px;
 }
 
 img.wishCard {
@@ -108,31 +107,31 @@ img.wishCard {
 }
 
 img.wishCard.show1 {
-      opacity: 1;
-      width: 275px;
-      left: 130px;
-      top: -310px;
+  opacity: 1;
+  width: 275px;
+  left: 130px;
+  top: -310px;
 }
 
-      img.wishCard.show2 {
-      opacity: 1;
-      width: 275px;
-      left: 0px;
-      top: -310px;
+img.wishCard.show2 {
+  opacity: 1;
+  width: 275px;
+  left: 0px;
+  top: -310px;
 }
 
-      img.wishCard.show3 {
-      opacity: 1;
-      width: 275px;
-      left: -135px;
-      top: -310px;
+img.wishCard.show3 {
+  opacity: 1;
+  width: 275px;
+  left: -135px;
+  top: -310px;
 }
 
-      img.wishCard.show4 {
-      opacity: 1;
-      width: 275px;
-      left: -265px;
-      top: -310px;
+img.wishCard.show4 {
+  opacity: 1;
+  width: 275px;
+  left: -265px;
+  top: -310px;
 }
 
 .gb {
@@ -149,10 +148,11 @@ body {
   /* max-width: 600px; */
   text-align: center;
 }
-input, button{
+input,
+button {
   position: relative;
 }
-img.bg{
+img.bg {
   height: 100vh;
 }
 .bg-body {
@@ -585,4 +585,30 @@ Snow.
   100% {
     background-position: 500px 1000px, 200px 400px, -100px 300px;
   }
+}
+@media only screen and (max-width:767px){
+    img.wishCard.show1 {
+      opacity: 1;
+      width: 230px;
+      left: 90px;
+      top: -280px;
+    }
+    img.wishCard.show2 {
+      opacity: 1;
+      width: 230px;
+      left: 0px;
+      top: -280px;
+    }
+    img.wishCard.show3 {
+      opacity: 1;
+      width: 230px;
+      left: -135px;
+      top: -280px;
+    }
+    img.wishCard.show4 {
+      opacity: 1;
+      width: 230px;
+      left: -265px;
+      top: -280px;
+    }
 }
