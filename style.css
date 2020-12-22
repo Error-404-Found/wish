@@ -595,10 +595,19 @@ Snow.
       height: auto;
       max-width: 100%;
     }
+  
+      img.wishCard.show {
+      opacity: 1;
+      width: 230px;
+      left: 50%;
+      transform: translate(-50%, 10px);
+      top: -280px;
+    }
     img.wishCard.show1 {
       opacity: 1;
       width: 230px;
-      left: 90px;
+      left: 50%;
+      transform: translate(-50%, 10px);
       top: -280px;
     }
     img.wishCard.show2 {
