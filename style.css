@@ -587,6 +587,11 @@ Snow.
   }
 }
 @media only screen and (max-width:767px){
+    #bg > video {
+      width: 100%;
+      position: absolute;
+      height: 100%;
+    }
     img.bg {
       height: 100vh;
       max-width: 100%;
