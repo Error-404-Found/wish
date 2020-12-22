@@ -10,6 +10,25 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+@font-face {
+  font-family: 'Christmas Bell';
+  src: url('fonts/ChristmasBellPersonalUse.eot');
+  src: url('fonts/ChristmasBellPersonalUse.eot?#iefix') format('embedded-opentype'),
+      url('fonts/ChristmasBellPersonalUse.woff2') format('woff2'),
+      url('fonts/ChristmasBellPersonalUse.woff') format('woff'),
+      url('fonts/ChristmasBellPersonalUse.ttf') format('truetype'),
+      url('fonts/ChristmasBellPersonalUse.svg#ChristmasBellPersonalUse') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+font-family: 'Christmas Bell';
+}
+
 .whatsapp {
   background: #99161a;
   border-radius: 0px;
