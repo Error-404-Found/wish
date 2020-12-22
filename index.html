@@ -173,11 +173,11 @@
                 
 //                 gb.src = gb.dataset.close;
                 gcard.classList.remove("show"+(i+1));
-                
-                if(giftbags[i] == el) {
-                    if(el.classList.contains("opened")) {
+                if(giftbags[i].classList.contains("opened")) {
                         oc = oc+1;
-                    } else {
+                    }
+                if(giftbags[i] == el) {
+                    if(!el.classList.contains("opened")) {
                         el.classList.add("opened");
                     }
                     
