@@ -185,8 +185,8 @@
             var name = document.getElementById('content');
             factionName = name.value;
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
-            var whatsapp = "whatsapp://send?text=" + message + " " + new URL(window.location.origin + "/?q=" + factionName);;
-
+            var whatsapp = "whatsapp://send?text=" + message + " " + new URL(window.location.origin + "/?q=" + factionName);
+            console.log(whatsapp);
             window.open(whatsapp);
         }
         
