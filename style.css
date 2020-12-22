@@ -147,7 +147,7 @@ img.wishCard {
   display: inline-block;
   opacity: 0;
   transition: 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22);
-  -webkit-transition: width 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22), top 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22), left 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22);
+  -webkit-transition: width 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22), top 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22), left 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22), opacity 1.5s cubic-bezier(0.49, 0.26, 0.52, 1.22);
 /*   -webkit-transition-property: top, left, width;
   -webkit-transition-deplay: 1.5s;
   -webkit-timing-function: cubic-bezier(0.49, 0.26, 0.52, 1.22); */
