@@ -67,7 +67,7 @@
             <div id="senderBox" style="display:none;">
                 <div style="position:relative">
                 <img src="images/name_bg_03.png" style="width: 350px;">
-                <span id="senderName">Dummy Text</span>
+                <span class="senderNameAll" id="senderName">Dummy Text</span>
                 </div>
             </div>
 
@@ -76,6 +76,11 @@
         </div>
     </div>
         <section id="wishScreen" class="wishing" style="display:none">
+            <div id="senderBox" style="display:none;">
+                <div style="position:relative">
+                <img src="images/name_bg_03.png" style="width: 350px;">
+                <span class="senderNameAll" id="senderName">Dummy Text</span>
+            </div>
         <div style="position: relative;" id="gifts">
                 <div onclick="openGift(this)" class="giftbag" >
                     <img class="gb" data-open="images/open.png" data-close="images/potli.png" src="images/potli.png" alt="">
@@ -113,7 +118,12 @@
             senderName = senderName.slice(3, senderName.length);
             // document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
 //             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
-            document.getElementById("senderName").innerText = senderName;
+            
+            var sn = document.getElementsByClassName("senderNameAll");
+            for(var s of sn) {
+                s.innerText = senderName;
+            }
+//             document.getElementById("senderName").innerText = senderName;
             playVid();
         };
         var bagCount = 0;
