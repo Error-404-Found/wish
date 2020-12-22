@@ -612,3 +612,25 @@ Snow.
       top: -280px;
     }
 }
+@media only screen and (max-width:375px){
+  img.wishCard.show1 {
+    opacity: 1;
+    width: 200px;
+    top: -240px;
+  }
+  img.wishCard.show2 {
+    opacity: 1;
+    width: 200px;
+    top: -240px;
+  }
+  img.wishCard.show3 {
+    opacity: 1;
+    width: 200px;
+    top: -240px;
+  }
+  img.wishCard.show4 {
+    opacity: 1;
+    width: 200px;
+    top: -240px;
+  }
+}
