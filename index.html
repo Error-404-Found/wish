@@ -184,9 +184,10 @@
         function addname() {
             var name = document.getElementById('content');
             factionName = name.value;
+            var url = window.location.origin + "?q=" + factionName;
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
-            var whatsapp = "whatsapp://send?text=" + message + " " + window.location.origin + "/?q=" + factionName.replace(/\s/g, '%20');
-            console.log(whatsapp);
+            var whatsapp = "whatsapp://send?text=" + message + " " + url;
+            console.log(url);
             window.open(whatsapp);
         }
         
