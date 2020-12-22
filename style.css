@@ -599,74 +599,74 @@ Snow.
     img.wishCard.show {
       opacity: 1;
       width: 230px;
-      left: 50%;
+      left: 50% !important;
       transform: translate(-50%, 10px);
       bottom: 0;
     }
     img#wishCard1 {
       left: 20%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard2 {
       left: 40%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard3 {
       left: 60%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard4 {
       left: 80%;
-      bottom: 0;
+      top: -200px;
     }
 }
 @media only screen and (max-width:375px){
     img.wishCard.show {
       opacity: 1;
       width: 230px;
-      left: 50%;
+      left: 50% !important;
       transform: translate(-50%, 10px);
       bottom: 0;
     }
     img#wishCard1 {
       left: 20%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard2 {
       left: 40%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard3 {
       left: 60%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard4 {
       left: 80%;
-      bottom: 0;
+      top: -200px;
     }
 }
 @media only screen and (max-width:320px){
     img.wishCard.show {
       opacity: 1;
       width: 230px;
-      left: 50%;
+      left: 50% !important;
       transform: translate(-50%, 10px);
       bottom: 0;
     }
     img#wishCard1 {
       left: 20%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard2 {
       left: 40%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard3 {
       left: 60%;
-      bottom: 0;
+      top: -200px;
     }
     img#wishCard4 {
       left: 80%;
-      bottom: 0;
+      top: -200px;
     }
 }
