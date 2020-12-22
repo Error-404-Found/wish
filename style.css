@@ -601,7 +601,7 @@ Snow.
       width: 50%;
       left: 50% !important;
       transform: translate(-50%, 10px);
-      bottom: 0;
+      top: -200%;
     }
     img#wishCard1 {
       left: 20%;
@@ -626,7 +626,7 @@ Snow.
       width: 50%;
       left: 50% !important;
       transform: translate(-50%, 10px);
-      bottom: 0;
+      top: -200%;
     }
     img#wishCard1 {
       left: 20%;
@@ -651,7 +651,7 @@ Snow.
       width: 50%;
       left: 50% !important;
       transform: translate(-50%, 10px);
-      bottom: 0;
+      top: -200%;
     }
     img#wishCard1 {
       left: 20%;
