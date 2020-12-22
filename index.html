@@ -100,7 +100,7 @@
             var senderName = window.location.search;
             senderName = senderName.slice(3, senderName.length);
             // document.getElementById("name").innerHTML = "<span>" + senderName + "</span><br> Wishes you a Merry Christmas and a Happy New year 2021!";
-            document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
+//             document.getElementById("name").innerHTML = "<span>" + senderName + "</span>";
             document.getElementById("senderName").innerText = senderName;
             playVid();
         };
@@ -114,7 +114,7 @@
                 unfade(document.getElementById("senderBox"));
                 }, 2750);
         }
-//         x.addEventListener('ended', myHandler, false);
+
         function myHandler() {
             x.addEventListener("click", function () {
                 document.getElementById("my_audio").play();
@@ -177,22 +177,8 @@
                     gcard.classList.add("show"+(i+1));
                 }
             }
-//             el.src = el.dataset.open;
-//             document.getElementById("wishCard"+id).classList.add("show"+id);
         }
 
-
-        // $.fn.christmas = function() {
-        //     $(this).each(function() {
-        //         $(this).html($(this).text().split("").map(function(v, i) {
-        //         return '<span class="christmas-' + (i % 2 == 0 ? 'gold' : 'blue') + '">' + v + '</span>';
-        //         }).join(""));
-        //     });
-        // };
-
-        // $(function() { 
-        //     $('p.christmas').christmas();
-        // });
     </script>
    </section>
 </body>
