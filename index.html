@@ -132,10 +132,10 @@
         var x = document.getElementById("introImg");
         function playVid() {
 //             x.play();
+            unfade(document.getElementById("senderBox"));
             setTimeout(function(){
                 myHandler();
-                unfade(document.getElementById("senderBox"));
-                }, 1000);
+                }, 100);
         }
 
         function myHandler() {
