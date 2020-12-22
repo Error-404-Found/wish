@@ -78,7 +78,7 @@
         </div>
     </div>
         <section id="wishScreen" class="wishing" style="display:none">
-            <div style="top:-100% !important;" id="senderBox">
+            <div style="top:-100% !important;" id="senderBox2">
                 <div style="position:relative">
                 <img src="images/name_bg_03.png" style="width: 350px;">
                 <span class="senderNameAll" id="senderName"></span>
@@ -151,8 +151,8 @@
                     unfade(document.getElementById("share2WaBtn"));
                 }, 4000);
             });
-            
         }
+        
         function fade(element, time=50) {
             var op = 1;  // initial opacity
             var timer = setInterval(function () {
@@ -165,6 +165,7 @@
                 op -= op * 0.1;
             }, time);
         }
+        
         function unfade(element, time=50) {
             element.style.opacity = 0;
             var op = 0.1;  // initial opacity
@@ -178,6 +179,7 @@
                 op += op * 0.1;
             }, time);
         }
+        
         function addname() {
             var name = document.getElementById('content');
             factionName = name.value;
@@ -190,7 +192,7 @@
         
         function openGift(el) {
             var oc = 0;
-//             document.getElementById("share2WaBtn").style.display = "block";
+            fade(document.getElementById("senderBox2"));
             var giftbags = document.getElementsByClassName("giftbag");
             var gb,gcard;
             for(var i=0; i<giftbags.length; i++){
