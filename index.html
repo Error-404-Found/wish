@@ -104,6 +104,7 @@
             document.getElementById("senderName").innerText = senderName;
             playVid();
         };
+        var bagCount = 0;
         var x = document.getElementById("myVideo");
         var y = document.getElementById('mp4_src');
         function playVid() {
@@ -162,14 +163,15 @@
         }
         
         function openGift(el) {
-            console.log(el);
+            
+            document.getElementById("share2WaBtn").style.display = "block";
             var giftbags = document.getElementsByClassName("giftbag");
             var gb,gcard;
             for(var i=0; i<giftbags.length; i++){
                 gb = giftbags[i].firstElementChild;
                 gcard = giftbags[i].querySelector(".wishCard")
                 
-                gb.src = gb.dataset.close;
+//                 gb.src = gb.dataset.close;
                 gcard.classList.remove("show"+(i+1));
                 
                 if(giftbags[i] == el) {
