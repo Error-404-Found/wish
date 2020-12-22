@@ -110,6 +110,7 @@ div#senderBox, div#senderBox2 {
   left: 50%;
   transform: translate(-50%, -60%);
   font-size: 23px;
+  color: #01489b;
 }
 
     img.wishCard.show {
