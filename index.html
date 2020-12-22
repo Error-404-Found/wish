@@ -191,7 +191,9 @@
                 setTimeout(function(){
                     fade(document.getElementById("wishScreen"));
                     fade(document.getElementById("openbg"));
-                    unfade(document.getElementById("closingbg"));
+                    setTimeout(function(){
+                        unfade(document.getElementById("closingbg"));
+                    },50);
                 }, 8000);
             }
         }
