@@ -155,6 +155,7 @@
             }, time);
         }
         function unfade(element, time=50) {
+            element.style.opacity = 0;
             var op = 0.1;  // initial opacity
             element.style.display = 'block';
             var timer = setInterval(function () {
