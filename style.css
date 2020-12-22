@@ -605,19 +605,19 @@ Snow.
     }
     img#wishCard1 {
       left: 20%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard2 {
       left: 40%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard3 {
       left: 60%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard4 {
       left: 80%;
-      top: -200px;
+/*       top: -200px; */
     }
 }
 @media only screen and (max-width:375px){
@@ -630,19 +630,19 @@ Snow.
     }
     img#wishCard1 {
       left: 20%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard2 {
       left: 40%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard3 {
       left: 60%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard4 {
       left: 80%;
-      top: -200px;
+/*       top: -200px; */
     }
 }
 @media only screen and (max-width:320px){
@@ -655,18 +655,18 @@ Snow.
     }
     img#wishCard1 {
       left: 20%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard2 {
       left: 40%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard3 {
       left: 60%;
-      top: -200px;
+/*       top: -200px; */
     }
     img#wishCard4 {
       left: 80%;
-      top: -200px;
+/*       top: -200px; */
     }
 }
