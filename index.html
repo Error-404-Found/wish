@@ -13,13 +13,13 @@
         sizes="192x192" />
     <link rel="apple-touch-icon"
         href="https://www.dhani.com/wp-content/uploads/2020/10/cropped-dhani-logo2-180x180.png" />
-    <!-- <meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
+    <meta name="title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta name="description"
-        content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021"> -->
+        content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://dhanigreetings.netlify.app/">
+    <meta property="og:url" content="https://elated-khorana-f616b5.netlify.app/">
     <meta property="og:title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta property="og:description"
         content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
@@ -27,7 +27,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://dhanigreetings.netlify.app/">
+    <meta property="twitter:url" content="https://elated-khorana-f616b5.netlify.app/">
     <meta property="twitter:title" content="Hey there, I have sent you gifts this Festive Season!">
     <meta property="twitter:description"
         content="Let's begin this new year with Prosperity, Health, Wealth & Positivity!. Here are some gifts for you. Merry Christmas and a Happy New Year 2021">
@@ -160,16 +160,10 @@
             factionName = name.value;
             var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
             var whatsapp = "whatsapp://send?text=" + message + " https://dhanigreetings.netlify.app/?q=" + factionName;
-            changeMeta(message);
+
             window.open(whatsapp);
         }
-        function changeMeta(element){
-            var elm = document.createElement("meta");
-            elm.setAttribute("property", "og:title") 
-            elm.setAttribute("content", element);
-            // Append the element to the HEAD
-            document.getElementsByTagName("head")[0].appendChild(elm);
-        }
+        
         function openGift(el) {
             console.log(el);
             var giftbags = document.getElementsByClassName("giftbag");
