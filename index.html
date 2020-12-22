@@ -61,11 +61,11 @@
     <div>
         <div style="z-index:1000000; pointer-events: none;" id="snow"></div>
         <div id="bg">
-            <img style="position: absolute; max-width:100%;" src="videos/intro.gif" alt="">
+            <img id="introImg" style="position: absolute; max-width:100%; z-index:1;" src="videos/intro.gif" alt="">
 <!--          <video id="myVideo" muted autoplay>
             <source id="mp4_src" src="videos/intro.mp4" type="video/mp4">
         </video> -->
-            <div id="senderBox" style="display:none;">
+            <div id="senderBox" style="display:none; z-index:100;">
                 <div style="position:relative">
                 <img src="images/name_bg_03.png" style="width: 350px;">
                 <span class="senderNameAll" id="senderName"></span>
@@ -129,11 +129,9 @@
             playVid();
         };
         var bagCount = 0;
-        var x = document.getElementById("myVideo");
-        var y = document.getElementById('mp4_src');
+        var x = document.getElementById("introImg");
         function playVid() {
-            x.play();
-            
+//             x.play();
             setTimeout(function(){
                 myHandler();
                 unfade(document.getElementById("senderBox"));
@@ -143,8 +141,7 @@
         function myHandler() {
             x.addEventListener("click", function () {
                 document.getElementById("my_audio").play();
-                y.setAttribute('src', "videos/GIF2.mp4");
-                x.load();
+                x.src="videos/intro.gif";
                 fade(document.getElementById("senderBox"));
                 setTimeout(function(){
                     fade(x);
