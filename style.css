@@ -116,7 +116,7 @@ div#senderBox, div#senderBox2 {
     img.wishCard.show {
       opacity: 1;
       width: 50%;
-      left: calc(50% - 0.5em) !important;
+      left: calc(50% - 25vw) !important;
       transform: translateY(10px);
       top: -200%;
     }
@@ -612,7 +612,7 @@ Snow.
     img.wishCard.show {
       opacity: 1;
       width: 50%;
-      left: calc(50% - 0.5em) !important;
+      left: calc(50% - 25vw) !important;
       transform: translateY(10px);
       top: -200%;
     }
@@ -633,7 +633,7 @@ Snow.
     img.wishCard.show {
       opacity: 1;
       width: 50%;
-      left: calc(50% - 0.5em) !important;
+      left: calc(50% - 25vw) !important;
       transform: translateY(10px);
       top: -200%;
     }
@@ -654,7 +654,7 @@ Snow.
     img.wishCard.show {
       opacity: 1;
       width: 50%;
-      left: calc(50% - 0.5em) !important;
+      left: calc(50% - 25vw) !important;
       transform: translateY(10px);
       top: -200%;
     }
