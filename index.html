@@ -6,20 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MPX2857');</script>
+    })(window,document,'script','dataLayer','GTM-MPX2857');</script> -->
     <!-- End Google Tag Manager -->
 </head>
-<!-- CSS only -->
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 <link rel="stylesheet" href="style.css">
 <body style="height:100vh; padding:0px; margin: 0px;">
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPX2857"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPX2857"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
     <!-- End Google Tag Manager (noscript) -->
     <audio src="audio/audio.mp3" id="my_audio" loop="loop" autoplay="autoplay"></audio>
     <section style="" id="main">
@@ -30,9 +28,6 @@
             <a id="analytics_introImg"><img id="introImg" style="position: absolute; max-width:100%; z-index:1;" src="videos/GIF-11.gif" alt=""></a>
             <!-- <img style="position: absolute; display:none;" src="videos/GIF2.gif" alt=""> caching the gif file, do not delete this line -->
             <img style="position: absolute; display:none;" src="videos/GIF-22.gif" alt=""> <!-- caching the gif file, do not delete this line -->
-<!--          <video id="myVideo" muted autoplay>
-            <source id="mp4_src" src="videos/intro.mp4" type="video/mp4">
-        </video> -->
             <div id="senderBox" style="display:none; z-index:100;">
                 <div style="position:relative">
                 <img src="images/name_bg_03.png" style="width: 350px;">
@@ -70,8 +65,7 @@
                     <img id="wishCard4" class="wishCard" src="images/4.png">
                 </div>
         </div>
-            <!-- <img style="position: absolute; left:50%; bottom: -75%; transform: translateX(-50%); height: 25%;" src="images/tap_03_03.png"> -->
-            <img style="position: absolute; left:50%; bottom: -75%; transform: translateX(-50%);" src="images/tap_03_03.gif">
+            <a id="analytics_open_all"><img onclick="openAll(this);" style="position: absolute; left:50%; bottom: -75%; transform: translateX(-50%);" src="images/tap_03_03.gif"></a>
     </section>
     <div style="display:none;" id="santaImg" class="santabase">
         <img src="images/Santabase.png" alt="">
@@ -83,8 +77,6 @@
              <a id="analytics_whatsapp"><button type="submit" onclick="addname();" id="whatsapp_btns">Share <img src="images/whatsapp_icon.svg" width="10%"></button></a>                
         </div>
     </section>
-<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script> -->
     <script type="text/javascript">
         window.addEventListener("load", function() {
             var senderName = decodeURIComponent(window.location.search);
@@ -100,7 +92,6 @@
         var bagCount = 0;
         var x = document.getElementById("introImg");
         function playVid() {
-//             x.play();
             unfade(document.getElementById("senderBox"));
             setTimeout(function(){
                 myHandler();
@@ -110,7 +101,6 @@
         function myHandler() {
             x.addEventListener("click", function () {
                 document.getElementById("my_audio").play();
-                // x.src="videos/GIF2.gif";
                 x.src="videos/GIF-22.gif";
                 fade(document.getElementById("senderBox"));
                 setTimeout(function(){
@@ -153,46 +143,66 @@
             var name = document.getElementById('content');
             factionName = name.value;
             var url = window.location.origin + window.location.pathname + "?q=" + factionName.replace(/ /g, '-');
-            // var message = " Hey there," + factionName + " has sent you gifts this Festive Season!";
             var message = "*" + factionName + "* has sent you surprise gifts! 🎁🎄 %0A*Open this to see what they are* 🌟%0A👇 💁‍♀️💁‍♂️👇%0A";
             var whatsapp = "whatsapp://send?text=" + message + " " + url;
             console.log(url);
             window.open(whatsapp);
         }
-        
+
+
+        function openAll(el) {
+            fade(el);
+            var giftbags = document.getElementsByClassName("giftbag");
+            var l = 1;
+            openGift(giftbags[0]);
+
+            var loop = setInterval(function(){
+                openGift(giftbags[l]);
+
+                if(l >= giftbags.length-1) {
+                    clearInterval(loop);
+                }
+                l++;
+            }, 3500);
+        }
+    
+
         function openGift(el) {
             var oc = 0;
-            fade(document.getElementById("senderBox2"));
             var giftbags = document.getElementsByClassName("giftbag");
             var gb,gcard;
+
+            fade(document.getElementById("senderBox2"));
+            
             for(var i=0; i<giftbags.length; i++){
                 gb = giftbags[i].firstElementChild.firstElementChild;
                 gcard = giftbags[i].querySelector(".wishCard")
                 
-//                 gb.src = gb.dataset.close;
-                gcard.classList.remove("show");
-                if(giftbags[i].classList.contains("opened")) {
+                  gcard.classList.remove("show");
+                  if(giftbags[i] == el) {
+                      if(!el.classList.contains("opened")) {
+                          el.classList.add("opened");
+                        }
+                        
+                        gb.src = gb.dataset.open;
+                        gcard.classList.add("show");
+                    }
+
+                    if(giftbags[i].classList.contains("opened")) {
                         oc = oc+1;
                     }
-                if(giftbags[i] == el) {
-                    if(!el.classList.contains("opened")) {
-                        el.classList.add("opened");
-                    }
-                    
-                    gb.src = gb.dataset.open;
-                    gcard.classList.add("show");
-                }
             }
             
-            if(oc==3) {
+            if(oc==4) {
                 setTimeout(function(){
-                    fade(document.getElementById("wishScreen"));
-                    setTimeout(function(){
-                        unfade(document.getElementById("closingbg"));
-                    },50);
-                }, 4000);
+                fade(document.getElementById("wishScreen"));
+                setTimeout(function(){
+                    unfade(document.getElementById("closingbg"));
+                },50);
+            }, 4000);
             }
         }
+
 
     </script>
    </section>
