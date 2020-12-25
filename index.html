@@ -151,19 +151,32 @@
 
 
         function openAll(el) {
-            fade(el);
+            // fade(el);
             var giftbags = document.getElementsByClassName("giftbag");
-            var l = 1;
-            openGift(giftbags[0]);
+            // var l = 1;
+            // openGift(giftbags[0]);
 
-            var loop = setInterval(function(){
-                openGift(giftbags[l]);
+            // var loop = setInterval(function(){
+            //     openGift(giftbags[l]);
 
-                if(l >= giftbags.length-1) {
-                    clearInterval(loop);
+            //     if(l >= giftbags.length-1) {
+            //         clearInterval(loop);
+            //     }
+            //     l++;
+            // }, 3500);
+
+            for(var i=0; i<giftbags.length; i++){
+
+                var gcard = document.querySelector(".show");
+                try {
+                    gcard.classList.remove("show");
+                } catch(error) {}
+
+                if(!giftbags[i].classList.contains("opened")) {
+                    openGift(giftbags[i]);
+                    break;
                 }
-                l++;
-            }, 3500);
+            }
         }
     
 
@@ -202,7 +215,6 @@
             }, 4000);
             }
         }
-
 
     </script>
    </section>
